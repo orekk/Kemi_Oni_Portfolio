@@ -1,0 +1,190 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Kemi Oni — Embedded & Firmware</title>
+  <link rel="icon" href="assets/transparent_joey.png" type="image/png"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <nav>
+    <div class="container navbar">
+      <div class="brand">
+        <img class="brand-logo" src="assets/transparent_joey.png" alt="K logo"/>
+        <span>Kemi Oni</span>
+      </div>
+      <button id="menu" class="toggle" aria-label="Open menu">☰</button>
+      <div class="navlinks">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#xp-research">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact" class="btn ghost">Contact</a>
+        <button id="color-toggle" class="toggle" title="Toggle dark mode">🌓</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Use --hero-left / --hero-top / --hero-shiftX to fine-tune position on your photo -->
+  <header id="hero" class="hero-img"
+          style="--hero:url('assets/background-kemi.jpg'); --ov:.35; --hero-left:2vw; --hero-top:160px; --hero-shiftX:-14vw">
+    <div class="overlay"></div>
+    <div class="container hero-inner">
+      <div class="hero-stack">
+        <h1 class="hi">Hi! I'm Kemi.</h1>
+        <p class="subtitle">
+          Embedded systems + firmware engineer who builds where software meets hardware.
+          I design, debug, and ship things that run on real devices.
+        </p>
+        <div class="pills">
+          <span class="pill">C / C++</span>
+          <span class="pill">Python</span>
+          <span class="pill">Verilog</span>
+          <span class="pill">ROS2 &amp; CAN</span>
+          <span class="pill">Linux / Yocto</span>
+          <span class="pill">Oscilloscope &amp; DAQ</span>
+        </div>
+        <p style="margin-top:1.2rem">
+          <a class="btn" href="Kemi_Oni_Resume_NewGrad.pdf" download>Download Résumé</a>
+          <a class="btn ghost" href="#xp-research">See my work ↓</a>
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <section id="about" class="section">
+    <div class="container">
+      <h2>It's nice to meet you!</h2>
+      <p>
+        I'm an Electrical Engineering student at the University of Waterloo, focused on low-level software,
+        digital hardware, and firmware for real products. I like clean, reliable systems and practical, testable designs.
+      </p>
+    </div>
+  </section>
+
+  <section id="xp-research" class="section">
+    <div class="container">
+      <h2>Experience & Research</h2>
+      <div class="twocol">
+        <div>
+          <h3 style="margin-top:.2rem">Industry Experience</h3>
+
+          <div class="experience-entry">
+            <img class="logo" src="assets/apple-logo.png" alt="Apple logo placeholder"/>
+            <div class="content">
+              <h3>Systems Firmware & Diagnostics Intern — Apple</h3>
+              <div class="meta">San Diego, CA • May–Aug 2025</div>
+              <p>
+                On the AirPods team, I reworked a power-critical feature so it could ship on battery-constrained devices.
+                The redesign cut consumption by <strong>~99.8%</strong> and I built diagnostics flows to validate behavior across edge cases.
+              </p>
+            </div>
+          </div>
+
+          <div class="experience-entry">
+            <img class="logo" src="assets/ecobee-logo.png" alt="ecobee logo placeholder"/>
+            <div class="content">
+              <h3>Embedded Developer Intern — ecobee</h3>
+              <div class="meta">Toronto, ON • Jan–Apr 2024</div>
+              <p>
+                Driver work, OS upgrades, and a C++ test bundle that accelerated device calibration by <strong>4.5×</strong>.
+                Lots of bring‑up and probing to fix flaky behaviors.
+              </p>
+            </div>
+          </div>
+
+          <div class="experience-entry">
+            <img class="logo" src="assets/transparent_joey.png" alt="Placeholder logo"/>
+            <div class="content">
+              <h3>IC Design Intern — NXP Semiconductors</h3>
+              <div class="meta">Ottawa, ON • Jan–Apr 2025</div>
+              <p>
+                Owner of scheduler module in Host Transit Agent VIP (SystemVerilog/UVM). Removed false fails and sped up regressions.
+              </p>
+            </div>
+          </div>
+
+          <div class="experience-entry">
+            <img class="logo" src="assets/transparent_joey.png" alt="Placeholder logo"/>
+            <div class="content">
+              <h3>Firmware Developer Intern — CircuitIQ</h3>
+              <div class="meta">Kitchener, ON • May–Aug 2023</div>
+              <p>
+                Firmware for a wireless signal‑analysis device: line‑current monitoring and simple spectral checks for anomaly detection.
+              </p>
+            </div>
+          </div>
+
+          <div class="experience-entry">
+            <img class="logo" src="assets/transparent_joey.png" alt="Placeholder logo"/>
+            <div class="content">
+              <h3>Embedded Software Intern — Wind River</h3>
+              <div class="meta">Ottawa, ON • Sep–Dec 2022</div>
+              <p>WR Linux (Yocto) BSPs and layers for runtime management and custom apps on NXP architectures.</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 style="margin-top:.2rem">Undergraduate Research</h3>
+
+          <div class="card">
+            <h4>Autonomous Jeep — ROS2 + CAN (DBW)</h4>
+            <div class="meta">University of Waterloo • 2024—present</div>
+            <p>
+              ROS2/C++ scripts for drive‑by‑wire over CAN enabling real‑time steering and braking.
+              Focus on reliable message timing, safety states, and test logs.
+            </p>
+            <div class="gallery">
+              <img src="assets/ura1.jpg" alt="Drive-by-wire test log on course">
+              <img src="assets/ura2.jpg" alt="CAN wiring & node setup">
+              <img src="assets/ura3.jpg" alt="Steering/brake DBW validation">
+            </div>
+          </div>
+
+          <div class="card">
+            <h4>Reconfigurable Computing — Prof. Andrew Boutros</h4>
+            <div class="meta">Fall ’25 – Winter ’26</div>
+            <p>Exploring domain‑specific accelerators and FPGA‑based flows with practical compiler/tooling paths.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Languages & Tools</h3>
+          <p>C, C++, Python, Verilog. Git, Linux, Yocto, Jira, MongoDB.</p>
+        </div>
+        <div class="card">
+          <h3>Hardware</h3>
+          <p>Altium, KiCAD, soldering, oscilloscopes, DMM, DC E‑load, function & signal generators.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:oluwakemioni2004@gmail.com">oluwakemioni2004@gmail.com</a> • 
+         GitHub: <a href="https://github.com/orekk">github.com/orekk</a> • 
+         LinkedIn: <a href="https://www.linkedin.com/in/oluwakemi-oni-150bba216/">/in/oluwakemi-oni-150bba216/</a>
+      </p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">© <span id="y"></span> Kemi Oni • Built with HTML, CSS & JS</div>
+  </footer>
+
+  <div id="lightbox" class="lightbox" aria-hidden="true"><img alt=""><button class="close" aria-label="Close">✕</button></div>
+  <script src="script.js"></script>
+</body>
+</html>
