@@ -30,10 +30,6 @@
   <!-- Use --hero-left / --hero-top / --hero-shiftX to fine-tune position on your photo -->
   <header id="hero" class="hero-img"
           style="--hero:url('assets/background-kemi.jpg'); --ov:.35; --hero-left:2vw; --hero-top:160px; --hero-shiftX:-14vw">
-    
-    <!-- Mobile-only hero photo
-    <img class="hero-photo-mobile" src="assets/background-kemi.jpg" alt="Kemi at San Diego overlook" /> -->
-
     <div class="overlay"></div>
     <div class="container hero-inner">
       <div class="hero-stack">
@@ -76,7 +72,7 @@
           <h3 style="margin-top:.2rem">Industry Experience</h3>
 
           <div class="experience-entry">
-            <div class="logo-wrap"><img class="logo" src="assets/apple-logo.clear.png" alt="Apple logo placeholder"/></div>
+            <img class="logo" src="assets/apple-logo.png" alt="Apple logo placeholder"/>
             <div class="content">
               <h3>Systems Firmware & Diagnostics Intern — Apple</h3>
               <div class="meta">San Diego, CA • May–Aug 2025</div>
@@ -88,7 +84,7 @@
           </div>
 
           <div class="experience-entry">
-            <div class="logo-wrap"><img class="logo" src="assets/ecobee-logo.clear.png" alt="ecobee logo placeholder"/></div>
+            <img class="logo" src="assets/ecobee-logo.png" alt="ecobee logo placeholder"/>
             <div class="content">
               <h3>Embedded Developer Intern — ecobee</h3>
               <div class="meta">Toronto, ON • Jan–Apr 2024</div>
@@ -100,10 +96,7 @@
           </div>
 
           <div class="experience-entry">
-            <!-- Drop a logo at assets/nxp-logo.png and replace this badge if you have it -->
-              <div class="logo-badge">
-                <img class="logo" src="assets/nxp-logo.clear.png" alt="NXP"/>
-              </div>
+            <img class="logo" src="assets/transparent_joey.png" alt="Placeholder logo"/>
             <div class="content">
               <h3>IC Design Intern — NXP Semiconductors</h3>
               <div class="meta">Ottawa, ON • Jan–Apr 2025</div>
@@ -114,10 +107,7 @@
           </div>
 
           <div class="experience-entry">
-            <!-- Drop a logo at assets/circuitiq-logo.png and replace this badge if you have it -->
-              <div class="logo-badge">
-                <img class="logo" src="assets/circuitiq-logo.clear.png" alt="CircuitIQ"/>
-              </div>
+            <img class="logo" src="assets/transparent_joey.png" alt="Placeholder logo"/>
             <div class="content">
               <h3>Firmware Developer Intern — CircuitIQ</h3>
               <div class="meta">Kitchener, ON • May–Aug 2023</div>
@@ -128,10 +118,7 @@
           </div>
 
           <div class="experience-entry">
-            <!-- Drop a logo at assets/windriver-logo.png and replace this badge if you have it -->
-              <div class="logo-badge">
-                <img class="logo" src="assets/windriver-logo.clear.png" alt="NXP"/>
-              </div>        
+            <img class="logo" src="assets/transparent_joey.png" alt="Placeholder logo"/>
             <div class="content">
               <h3>Embedded Software Intern — Wind River</h3>
               <div class="meta">Ottawa, ON • Sep–Dec 2022</div>
@@ -144,24 +131,8 @@
           <h3 style="margin-top:.2rem">Undergraduate Research</h3>
 
           <div class="card">
-            <h4>ParRP on Octopus + gem5</h4>
-            <div class="meta">University of Waterloo • Fall ’25 — Winter ’26</div>
-            <p>
-              Research project on predictable cache partitioning for multicore systems.  
-              <strong>Part 1:</strong> Complete the integration of the <em>Partitioned Replacement Policy (ParRP)</em> into the Octopus cycle-accurate cache simulator and connect it with gem5 for full-system validation.  
-              <strong>Part 2:</strong> Extend ParRP to <em>exclusive</em> L2 cache designs and evaluate the trade-offs.
-            </p>
-            <ul class="bullets">
-              <li>Implementing partitioned replacement metadata and ownership tracking for shared cache lines.</li>
-              <li>Bringing up Octopus standalone → gem5 integration with timing logs and correctness checks.</li>
-              <li>Comparing inclusive vs. exclusive L2 cache performance under ParRP.</li>
-            </ul>
-            <div class="tags">C++ • Octopus • gem5 • cache coherence • WCET</div>
-          </div>
-
-          <div class="card">
             <h4>Autonomous Jeep — ROS2 + CAN (DBW)</h4>
-            <div class="meta">University of Waterloo • Summer '24</div>
+            <div class="meta">University of Waterloo • 2024—present</div>
             <p>
               ROS2/C++ scripts for drive‑by‑wire over CAN enabling real‑time steering and braking.
               Focus on reliable message timing, safety states, and test logs.
@@ -173,7 +144,12 @@
             </div>
           </div>
 
+          <div class="card">
+            <h4>Reconfigurable Computing — Prof. Andrew Boutros</h4>
+            <div class="meta">Fall ’25 – Winter ’26</div>
+            <p>Exploring domain‑specific accelerators and FPGA‑based flows with practical compiler/tooling paths.</p>
           </div>
+        </div>
       </div>
     </div>
   </section>

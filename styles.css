@@ -86,3 +86,53 @@ nav{position:sticky;top:0;z-index:50;background:var(--panel);border-bottom:1px s
 .lightbox.open{display:flex}
 .lightbox img{max-width:92vw;max-height:92vh;border-radius:14px;box-shadow:0 10px 40px rgba(0,0,0,.5)}
 .lightbox .close{position:absolute;top:16px;right:20px;background:#ffffff;border:0;border-radius:999px;padding:10px 14px;font-weight:800;color:#111;cursor:pointer}
+
+
+/* === Improved Logo Handling === */
+.logo-wrap{width:36px;height:36px;border:1px solid var(--border);border-radius:10px;background:#00000008;
+  display:grid;place-items:center;overflow:hidden}
+.logo-wrap img.logo{width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply;
+  image-rendering:-webkit-optimize-contrast}
+/* Fallback badge when a logo asset doesn't exist yet */
+.logo-badge{width:36px;height:36px;border:1px solid var(--border);border-radius:10px;
+  display:grid;place-items:center;font-weight:700;font-size:.8rem;background:#f3f4f6;color:#374151}
+
+/* === Gallery thumbnails: tighter crop & consistent look === */
+.gallery img{border-radius:12px;object-fit:cover;aspect-ratio:4/3;background:#f8f9fb}
+
+/* === Mobile-first hero improvements === */
+.hero-photo-mobile { object-position: right 10% center; } /* try right 15% or 5% */
+
+
+@media (max-width: 560px){
+  /* Turn off background/overlay and show a real <img> on phones */
+  .hero-img{background:none;min-height:auto;padding:0}
+  .hero-img .overlay{display:none}
+  .hero-photo-mobile{
+    display:block;
+    width:100%;
+    height:52vh;            /* controls the visible crop height */
+    object-fit:cover;
+    object-position:right center; /* keep your face in-frame */
+  }
+
+  /* Put the copy BELOW the photo and make it readable */
+  .hero-inner{display:block;padding:14px 14px 24px}
+  .hero-stack{
+    max-width:760px;
+    margin:0 auto;
+    background:rgba(255,255,255,.85);
+    border:1px solid #00000014;
+    border-radius:16px;
+    padding:12px 14px;
+    backdrop-filter:saturate(140%) blur(2px);
+  }
+  .hero-stack .hi{
+    font-size:clamp(28px, 9vw, 40px);
+    line-height:1.1;
+    margin:0 0 6px;
+  }
+  .hero-stack .subtitle{font-size:14px;margin:0 0 8px}
+  .pills{gap:8px}
+}
+
