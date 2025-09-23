@@ -136,3 +136,117 @@ nav{position:sticky;top:0;z-index:50;background:var(--panel);border-bottom:1px s
   .pills{gap:8px}
 }
 
+
+
+
+/* === NSBE Journey Section === */
+section#nsbe-journey{
+  padding: 4rem 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+#nsbe-journey .section-title{
+  font-size: clamp(1.6rem, 1.2rem + 1.8vw, 2.4rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 0.25rem;
+}
+#nsbe-journey .section-subtitle{
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+}
+.nsbe-lead{
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+.nsbe-timeline{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  border-left: 3px solid #11182710;
+  padding-left: 1rem;
+  margin-bottom: 2rem;
+}
+.nsbe-step{
+  position: relative;
+  padding-left: 0.25rem;
+}
+.nsbe-step::before{
+  content: "";
+  position: absolute;
+  left: -1.25rem;
+  top: 0.35rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 9999px;
+  background: #111827;
+}
+.nsbe-step h4{
+  margin: 0 0 0.25rem 0;
+  font-size: 1.05rem;
+}
+.nsbe-step p{
+  margin: 0;
+  color: #374151;
+}
+.nsbe-gallery{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+@media (min-width: 720px){
+  .nsbe-gallery{ grid-template-columns: repeat(3, 1fr); }
+}
+.nsbe-card{
+  overflow: hidden;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+.nsbe-card img{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .2s ease;
+  cursor: zoom-in;
+}
+.nsbe-card:hover img{ transform: scale(1.02); }
+
+/* Lightbox */
+.nsbe-lightbox-backdrop{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+.nsbe-lightbox-backdrop.active{ display: flex; }
+.nsbe-lightbox-backdrop img{
+  max-width: 92vw;
+  max-height: 88vh;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+.nsbe-lightbox-backdrop .close{
+  position: fixed;
+  top: 18px;
+  right: 22px;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+
+/* Consistent section divider */
+.section-divider{
+  border: 0;
+  height: 1px;
+  background: #e5e7eb;
+  margin: 4rem 0;
+}

@@ -21,11 +21,11 @@
         <a href="#about">About</a>
         <a href="#xp-research">Experience</a>
         <a href="#skills">Skills</a>
-        <a href="#nsbe-journey">NSBE</a>
         <a href="#contact" class="btn ghost">Contact</a>
         <button id="color-toggle" class="toggle" title="Toggle dark mode">🌓</button>
       </div>
-    </div></nav>
+    </div>
+  </nav>
 
   <!-- Use --hero-left / --hero-top / --hero-shiftX to fine-tune position on your photo -->
   <header id="hero" class="hero-img"
@@ -194,50 +194,7 @@
     </div>
   </section>
 
-  
-  
-<hr class="section-divider">
-<!-- ===== NSBE Section ===== -->
-  <section  id="nsbe-journey" class="section">
-    <h2 id="nsbe-journey-title" class="section-title">NSBE</h2>
-    <p class="section-subtitle">My journey of leadership and growth within NSBE</p>
-    <p class="nsbe-lead">
-      NSBE has been one of the most defining parts of my engineering story. I started in 2022 as Mentorship Chair,
-      later stepped up as Social Media Chair in 2024, took on the role of Conference Planning Chair for 2024/2025, 
-      and now serve as Vice President in 2025. Through NSBE, I’ve grown as a leader and as a Black engineer—and I’m focused on empowering others to thrive.
-    </p>
-
-    <div class="nsbe-timeline" role="list">
-      <div class="nsbe-step" role="listitem">
-        <h4>Mentorship Chair (2022)</h4>
-        <p>Built peer-to-peer mentorship, connected underclassmen with role models, and ran skills workshops.</p>
-      </div>
-      <div class="nsbe-step" role="listitem">
-        <h4>Social Media Chair (2024)</h4>
-        <p>Amplified our chapter’s voice, highlighted member wins, and improved event turnout with targeted campaigns.</p>
-      </div>
-      <div class="nsbe-step" role="listitem">
-        <h4>Conference Planning Chair (2024/2025)</h4>
-        <p>Led logistics and sponsorship outreach for our Chicago conference trip; coordinated delegates and timelines.</p>
-      </div>
-      <div class="nsbe-step" role="listitem">
-        <h4>Vice President (2025)</h4>
-        <p>Driving chapter strategy, partnerships, and programs that empower Black engineers to lead and excel.</p>
-      </div>
-    </div>
-
-    <h3 class="section-subtitle" style="margin-top:1rem;">Moments from NSBE</h3>
-    <div class="nsbe-gallery" id="nsbe-gallery">
-      <figure class="nsbe-card"><img src="assets/nsbe/nsbe-1.jpg" alt="NSBE photo placeholder"></figure>
-      <figure class="nsbe-card"><img src="assets/nsbe/nsbe-2.jpg" alt="NSBE photo placeholder"></figure>
-      <figure class="nsbe-card"><img src="assets/nsbe/nsbe-3.jpg" alt="NSBE photo placeholder"></figure>
-      <figure class="nsbe-card"><img src="assets/nsbe/nsbe-4.jpg" alt="NSBE photo placeholder"></figure>
-      <figure class="nsbe-card"><img src="assets/nsbe/nsbe-5.jpg" alt="NSBE photo placeholder"></figure>
-      <figure class="nsbe-card"><img src="assets/nsbe/nsbe-6.jpg" alt="NSBE photo placeholder"></figure>
-    </div>
-  </section>
-
-<section id="contact" class="section">
+  <section id="contact" class="section">
     <div class="container">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:oluwakemioni2004@gmail.com">oluwakemioni2004@gmail.com</a> • 
@@ -253,79 +210,5 @@
 
   <div id="lightbox" class="lightbox" aria-hidden="true"><img alt=""><button class="close" aria-label="Close">✕</button></div>
   <script src="script.js"></script>
-
-
-  
-
-
-<script>
-
-// === NSBE Lightbox ===
-(function(){
-  const gallery = document.getElementById('nsbe-gallery');
-  const lightbox = document.getElementById('nsbe-lightbox');
-  if(!gallery || !lightbox) return;
-  const imgTag = lightbox.querySelector('img');
-  const closeBtn = lightbox.querySelector('.close');
-
-  function open(src, alt){
-    imgTag.src = src;
-    imgTag.alt = alt || 'NSBE photo';
-    lightbox.classList.add('active');
-    lightbox.setAttribute('aria-hidden','false');
-  }
-  function close(){
-    lightbox.classList.remove('active');
-    lightbox.setAttribute('aria-hidden','true');
-    imgTag.src = '';
-  }
-
-  gallery.addEventListener('click', (e)=>{
-    const t = e.target;
-    if(t && t.tagName === 'IMG'){
-      open(t.getAttribute('src'), t.getAttribute('alt'));
-    }
-  });
-  closeBtn.addEventListener('click', close);
-  lightbox.addEventListener('click', (e)=>{
-    if(e.target === lightbox) close();
-  });
-  document.addEventListener('keydown', (e)=>{
-    if(e.key === 'Escape') close();
-  });
-})();
-
-</script>
-
-<!-- NSBE Active Link Highlight -->
-<script>
-(function(){
-  // Find all sections with an id that have matching nav anchors
-  const sections = Array.from(document.querySelectorAll('section[id]'));
-  const navLinks = Array.from(document.querySelectorAll('nav a[href^="#"]'));
-  if (!sections.length || !navLinks.length) return;
-
-  const map = new Map();
-  navLinks.forEach(a => {
-    const id = a.getAttribute('href').slice(1);
-    map.set(id, a);
-  });
-
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      const id = entry.target.id;
-      const link = map.get(id);
-      if (!link) return;
-      if (entry.isIntersecting) {
-        navLinks.forEach(l => l.classList.remove('active'));
-        link.classList.add('active');
-      }
-    });
-  }, { rootMargin: "-20% 0px -60% 0px", threshold: 0.1 });
-
-  sections.forEach(sec => io.observe(sec));
-})();
-</script>
-
 </body>
 </html>
